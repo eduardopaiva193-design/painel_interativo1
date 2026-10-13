@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidências de Validade: Relações com Outras Variáveis</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --primary: #4338ca;
+      --primary-light: #e0e7ff;
+      --accent-green: #059669;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text-main); line-height: 1.5; padding: 16px; max-width: 680px; margin: auto; }
+
+    header { text-align: center; margin-bottom: 24px; padding-top: 10px; }
+    header h1 { font-size: 1.5rem; color: var(--primary); font-weight: 800; margin-bottom: 6px; }
+    header p { font-size: 0.95rem; color: var(--text-muted); }
+
+    .section-title { font-size: 1.15rem; font-weight: 700; margin: 24px 0 12px; display: flex; align-items: center; gap: 8px; color: var(--text-main); }
+    
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+    .badge-conv { background: #dcfce7; color: var(--accent-green); }
+    .badge-div { background: #fee2e2; color: var(--accent-rose); }
+    .badge-conc { background: #fef3c7; color: var(--accent-amber); }
+    .badge-pred { background: var(--primary-light); color: var(--primary); }
+
+    .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .card p { font-size: 0.9rem; color: #475569; }
+
+    /* PARTE DO JOGO CLICÁVEL */
+    .game-box { background: #ffffff; border: 2px solid var(--primary); border-radius: var(--radius); padding: 20px; margin-top: 28px; box-shadow: 0 4px 14px rgba(67, 56, 202, 0.08); }
+    .case-container { background: #f1f5f9; padding: 14px; border-radius: 10px; margin: 14px 0; border-left: 4px solid var(--primary); }
+    .case-badge { font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; display: block; }
+    .case-text { font-size: 0.95rem; font-weight: 600; color: #0f172a; }
+
+    .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+    .btn { background: #f8fafc; border: 1px solid #cbd5e1; padding: 12px 10px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: 0.2s; text-align: center; }
+    .btn:active { transform: scale(0.98); }
+    .btn:hover { background: #e2e8f0; }
+
+    .feedback { margin-top: 14px; padding: 12px; border-radius: 8px; font-size: 0.9rem; display: none; line-height: 1.4; }
+    .feedback.correct { background: #dcfce7; border: 1px solid #86efac; color: #065f46; }
+    .feedback.wrong { background: #fee2e2; border: 1px solid #fca5a5; color: #991b1b; }
+
+    .btn-next { display: none; width: 100%; margin-top: 12px; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+    footer { text-align: center; margin-top: 30px; font-size: 0.8rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Evidências de Validade</h1>
+    <p>Relações com Variáveis Externas (Standards / AERA, APA & NCME)</p>
+  </header>
+
+  <!-- INFOGRÁFICO PARTE 1 -->
+  <div class="section-title"><span>🧬</span> 1. Outras Medidas Psicológicas</div>
+
+  <div class="card">
+    <span class="badge badge-conv">Convergente</span>
+    <h3>Validade Convergente (Mesmo Domínio)</h3>
+    <p>O novo teste se correlaciona fortemente e de forma positiva com testes já consolidados que medem traços semelhantes ou iguais (ex.: Novo Inventário vs. BDI-II).</p>
+  </div>
+
+  <div class="card">
+    <span class="badge badge-div">Discriminante</span>
+    <h3>Validade Divergente (Outro Domínio)</h3>
+    <p>O teste tem correlação nula ou fraca com medidas de construtos não relacionados, provando especificidade conceitual (ex.: Escala de Ansiedade vs. Raciocínio Espacial).</p>
+  </div>
+
+  <!-- INFOGRÁFICO PARTE 2 -->
+  <div class="section-title"><span>🎯</span> 2. Relações Teste-Critério (Mundo Real)</div>
+
+  <div class="card">
+    <span class="badge badge-conc">No Presente</span>
+    <h3>Validade Concorrente</h3>
+    <p>O teste e o critério prático acontecem simultaneamente no mesmo ponto do tempo. Foco em triagem rápida e substituição de procedimentos demorados.</p>
+  </div>
+
+  <div class="card">
+    <span class="badge badge-pred">No Futuro</span>
+    <h3>Validade Preditiva</h3>
+    <p>O teste é aplicado agora para prever um critério da vida real que só vai ocorrer meses ou anos depois. Foco em seleção, prognóstico e prevenção.</p>
+  </div>
+
+  <!-- PARTE DO JOGO INTERATIVO -->
+  <div class="game-box">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2 style="font-size:1.15rem; color:var(--primary);">🎮 Estudo de Caso Interativo</h2>
+      <span id="score-text" style="font-size:0.8rem; font-weight:700; background:#f1f5f9; padding:4px 8px; border-radius:12px;">Caso 1 de 4</span>
+    </div>
+
+    <div class="case-container">
+      <span class="case-badge" id="case-category">Cenário Clínico</span>
+      <div class="case-text" id="case-description">Carregando caso...</div>
+    </div>
+
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">Que tipo de evidência está sendo buscada aqui?</p>
+
+    <div class="btn-grid">
+      <button class="btn" onclick="checkAnswer('convergente')">Convergente</button>
+      <button class="btn" onclick="checkAnswer('divergente')">Divergente</button>
+      <button class="btn" onclick="checkAnswer('concorrente')">Concorrente</button>
+      <button class="btn" onclick="checkAnswer('preditiva')">Preditiva</button>
+    </div>
+
+    <div id="feedback-box" class="feedback"></div>
+    <button id="next-btn" class="btn-next" onclick="nextCase()">Próximo Caso ➔</button>
+  </div>
+
+  <footer>
+    <p>Material de apoio para aula de Psicometria e Avaliação Psicológica.</p>
+  </footer>
+
+  <script>
+    const cases = [
+      {
+        category: "Contexto Clínico / Diagnóstico",
+        text: "Uma equipe aplica uma escala rápida de depressão de 5 minutos e, no mesmo dia, submete os mesmos pacientes a uma entrevista psiquiátrica clínica aprofundada para confirmar o diagnóstico.",
+        answer: "concorrente",
+        explanation: "Correto! É Validade Concorrente porque o teste e o critério clínico externo foram coletados no mesmo momento temporal (no presente)."
+      },
+      {
+        category: "Contexto de Trânsito / Seleção",
+        text: "Candidatos a motoristas de ônibus fazem um teste de atenção concentrada na admissão. A empresa acompanha os registros de multas e colisões desses mesmos motoristas ao longo dos 2 anos seguintes.",
+        answer: "preditiva",
+        explanation: "Correto! É Validade Preditiva porque existe um intervalo temporal: o teste foi feito no início e o critério prático de interesse só ocorreu no futuro."
+      },
+      {
+        category: "Construção de Escala",
+        text: "Os pesquisadores aplicam sua nova escala de Autoeficácia Acadêmica e também uma escala consagrada de Autoestima nos mesmos alunos, esperando uma correlação positiva moderada a alta.",
+        answer: "convergente",
+        explanation: "Correto! É Validade Convergente porque compara o novo teste com outra medida psicológica já validada que mede um construto teoricamente próximo."
+      },
+      {
+        category: "Refinamento do Teste",
+        text: "Para provar que a nova escala de Depressão não está apenas medindo cansaço físico geral, os autores aplicam um teste de fadiga muscular e encontram uma correlação próxima de zero.",
+        answer: "divergente",
+        explanation: "Correto! É Validade Divergente (Discriminante) porque mostra ausência de relação teórica com um construto diferente, garantindo especificidade."
+      }
+    ];
+
+    let currentCase = 0;
+
+    function renderCase() {
+      const c = cases[currentCase];
+      document.getElementById("case-category").innerText = c.category;
+      document.getElementById("case-description").innerText = c.text;
+      document.getElementById("score-text").innerText = `Caso ${currentCase + 1} de ${cases.length}`;
+      document.getElementById("feedback-box").style.display = "none";
+      document.getElementById("next-btn").style.display = "none";
+      
+      const buttons = document.querySelectorAll(".btn");
+      buttons.forEach(btn => btn.disabled = false);
+    }
+
+    function checkAnswer(chosen) {
+      const c = cases[currentCase];
+      const feedback = document.getElementById("feedback-box");
+      const buttons = document.querySelectorAll(".btn");
+      buttons.forEach(btn => btn.disabled = true);
+
+      feedback.style.display = "block";
+      if (chosen === c.answer) {
+        feedback.className = "feedback correct";
+        feedback.innerHTML = "<strong>✅ Mandou bem!</strong> " + c.explanation;
+      } else {
+        feedback.className = "feedback wrong";
+        feedback.innerHTML = `<strong>❌ Não foi bem essa.</strong> A resposta correta era <strong>${c.answer.toUpperCase()}</strong>. ${c.explanation}`;
+      }
+
+      if (currentCase < cases.length - 1) {
+        document.getElementById("next-btn").style.display = "block";
+      } else {
+        document.getElementById("next-btn").style.display = "block";
+        document.getElementById("next-btn").innerText = "Recomeçar Dinâmica ↺";
+      }
+    }
+
+    function nextCase() {
+      if (currentCase < cases.length - 1) {
+        currentCase++;
+      } else {
+        currentCase = 0;
+        document.getElementById("next-btn").innerText = "Próximo Caso ➔";
+      }
+      renderCase();
+    }
+
+    renderCase();
+  </script>
+</body>
+</html>
